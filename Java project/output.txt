@@ -1,0 +1,27 @@
+1:package com.day10;
+2:
+3:public class Gugudan {
+4:	private int dan;
+5:	public Gugudan(int dan) {
+6:		this.dan=dan;
+7:		
+8:	}
+9:	public void print() {
+10:		for(int i=1; i<10; i++) {
+11:			System.out.println(dan+"*"+i+"="+dan*i);
+12:		}
+13:	}
+14:
+15:	public static void main(String[] args) {
+16:		Gugudan g1=new Gugudan(5);
+17:		g1.print(); // 5*1
+18:		
+19:		Gugudan g2=new Gugudan(6);
+20:		g2.print(); 
+21:		
+22:		Gugudan g3=new Gugudan(9);
+23:		g3.print(); 
+24:		
+25:	}
+26:
+27:}

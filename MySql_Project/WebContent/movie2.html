@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div id="result"></div>
+
+<script>
+let target = document.querySelector("#result");
+fetch("http://yts-proxy.now.sh/list_movies.json?sort_by=rating", {
+	method : 'get'
+}) //가고자하는 주소, 방식
+.then(res => res.json()) //화살표함수
+.then(function(res) {
+	//console.log(res);
+	target.innerHTML 
+	= res.data.movies.map(m=>"title : " + m.title + "<br/><img src='"+m.large_cover_image+"' width=300px height=300/><br/>")
+})
+
+	
+</script>
+
+</body>
+</html>
